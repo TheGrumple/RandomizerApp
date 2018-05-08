@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+		<StackPanel>
+			<TextBlock TextAlignment="Center" FontSize="36" Text="{Binding SelectedMovie}"/>
+			<Button Margin="5" Command="{Binding SelectMovieCommand}">Select Movie...</Button>
+			<Button Margin="5" Command="{Binding ReadListCommand}">Read List...</Button>
+			<Button Margin="5" Click="Button_Click">Create New List...</Button>
+			<Button Margin="5" Click="Button_Click_1">Open File</Button>
+		</StackPanel>
     </Grid>
 </Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="RandomizerApp.CreateNewListDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RandomizerApp"
+        mc:Ignorable="d"
+        Title="CreateNewListDialog" Height="300" Width="300">
+    <Grid>
+		<StackPanel>
+			<TextBox x:Name="UserInput"
+					 AcceptsReturn="True"
+					 TextWrapping="Wrap"
+					 HorizontalScrollBarVisibility="Auto"
+					 VerticalScrollBarVisibility="Auto"
+					 MaxHeight="220"></TextBox>
+			<Button Command="{Binding CommitTextCommand}"
+					CommandParameter="{Binding ElementName=UserInput}"
+					Margin="5">Submit List</Button>
+			<Button Name="TextGetTest" Click="btn_Test">Testing</Button>
+		</StackPanel>
+    </Grid>
+</Window>
